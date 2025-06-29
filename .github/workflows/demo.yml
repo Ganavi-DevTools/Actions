@@ -40,3 +40,6 @@ jobs:
         with:
           name: workflow-context
           path: .github/context/github.json
+
+      - name: viewing the file
+        run: cat .github/context/github.json
