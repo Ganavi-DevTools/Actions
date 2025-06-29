@@ -53,7 +53,7 @@ jobs:
 
       - name: Parse and Use Context
         env:
-          GITHUB_CONTEXT_PATH: .github/context/github.json
+          GITHUB_CONTEXT_PATH: github.json
         run: |
           echo "---Raw Context ---"
           cat "$GITHUB_CONTEXT_PATH"
