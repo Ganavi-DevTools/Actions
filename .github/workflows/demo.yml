@@ -32,14 +32,14 @@ jobs:
       - name: Dump GitHub Context
         run: |
           mkdir -p .github/context
-          echo '${{ toJson(github) }}' | jq . > .github/context/github.json
+          echo '${{ toJson(github) }}' | jq . > github.json
           echo "Saved GitHub context"
         
       - name: Upload Context File
         uses: actions/upload-artifact@v4
         with:
           name: workflow-context
-          path: .github/context/github.json
+          path: github.json
   
   test:
     if: github.ref == 'refs/heads/main'
