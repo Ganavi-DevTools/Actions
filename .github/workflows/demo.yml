@@ -24,3 +24,7 @@ jobs:
           npm install
           npm install @actions/github
 
+      - name: Run build script
+        run: |
+          chmod +x ./scripts/build.sh
+          ./scripts/build.sh
