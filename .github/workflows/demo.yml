@@ -29,11 +29,14 @@ jobs:
           chmod +x ./scripts/build.sh
           ./scripts/build.sh
 
-      - name: Upload build artifact
+      - name: Dump GitHub Context
+        run: |
+          mkdir -p .github/context
+          echo '${{ toJson(github) }}' | jq . > .github/context/github.json
+          echo "Saved GitHub context"
+        
+      - name: Upload Context File
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifact
-          path: ./build/
-
-      - name: Install dependencies
-        run: cat build-artifact
+          name: workflow-context
+          path: .github/context/github.json
