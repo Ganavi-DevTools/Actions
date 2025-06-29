@@ -70,3 +70,6 @@ jobs:
           else
             echo "Automatically triggered by $EVENT_TYPE"
           fi
+
+      - name: Run tests
+        run: npm test
