@@ -71,7 +71,8 @@ jobs:
           fi
 
       - name: List files
-        run: git ls-tree -r HEAD --name-only
+        run: ls -ltra
+        
       - name: Run tests
         run: npm test
 
