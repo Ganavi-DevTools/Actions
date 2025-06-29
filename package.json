@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",  // or your testing command
+    "test": "jest", 
     "build": "mkdir -p build && cp index.js build/",
     "lint": "eslint ."
   },
   "devDependencies": {
-    "jest": "^29.0.0"  // Ensure Jest is installed if you're using it
-  }
+    "jest": "^29.0.0"  
 }
