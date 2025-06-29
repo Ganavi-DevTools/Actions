@@ -70,6 +70,9 @@ jobs:
             echo "Automatically triggered by $EVENT_TYPE"
           fi
 
+      - name: Run tests
+        run: npm test
+
   deploy:
     runs-on: ubuntu-latest
     needs: test
