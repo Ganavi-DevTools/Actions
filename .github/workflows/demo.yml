@@ -76,8 +76,8 @@ jobs:
       - name: List files
         run: ls -ltra
 
-      - name: locate package.json
-        run: locate package.json
+      - name: Find package.json
+        run: find . -name "package.json"
       
       - name: Run tests
         run: npm test
