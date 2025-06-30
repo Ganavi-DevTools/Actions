@@ -76,8 +76,11 @@ jobs:
       - name: List files
         run: ls -ltra
 
-      - name: Find package.json
-        run: find . -name "package.json"
+      - name: List current directory
+        run: ls -la
+
+      - name: List parent directory
+        run: ls -la ..
       
       - name: Run tests
         run: npm test
