@@ -76,8 +76,8 @@ jobs:
       - name: List files
         run: ls -ltra
 
-      - name: present working directory
-        run: pwd package.json
+      - name: locate package.json
+        run: locate package.json
       
       - name: Run tests
         run: npm test
