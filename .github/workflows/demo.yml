@@ -75,7 +75,10 @@ jobs:
 
       - name: List files
         run: ls -ltra
-                
+
+      - name: present working directory
+        run: pwd
+      
       - name: Run tests
         run: npm test
 
