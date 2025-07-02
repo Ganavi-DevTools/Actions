@@ -2,7 +2,7 @@ name: CI Workflow
 
 on:
   push:
-    branches:
+    branches: 
       - main
   workflow_dispatch:
 
@@ -73,14 +73,7 @@ jobs:
             echo "Automatically triggered by $EVENT_TYPE"
           fi
 
-      - name: List files
-        run: ls -ltra
 
-      - name: List current directory
-        run: ls -la
-
-      - name: List parent directory
-        run: ls -la ..
       
 
   deploy:
